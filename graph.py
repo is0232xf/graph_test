@@ -22,7 +22,6 @@ def scatter(x, y, color='black'):
     plt.show()
 
 def circle(label, p, sorted=False):
-    plt.xticks(x)
     if sorted==True:
         p, label = circle_sort(p, label)
         print("p:", p)
