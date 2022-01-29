@@ -1,9 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+def temp_comp(month, temp_list, colors):
+    for i in range(len(temp_list)):
+        plt.plot(month, temp_list[i], colors[i])
+    plt.grid()
+    plt.show()
+
 def line(x, y, color='black'):
-    plt.subplots(figsize=(20, 2))
-    plt.xticks([])
     plt.plot(x, y, color)
     plt.show()
 

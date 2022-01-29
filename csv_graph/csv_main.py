@@ -1,10 +1,16 @@
 import graph
 import pandas as pd
 
-filename = 'otsu_temp.csv'
-data = pd.read_csv(filename)
+filename = 'zenkoku.csv'
+data = pd.read_csv(filename, encoding="shift-jis")
 
 month = data['month'].values.tolist()
-temp = data['temp'].values.tolist()
 
-graph.line(month, temp)
+kyoto_temp = data['kyoto_temp'].values.tolist()
+naha_temp = data['naha_temp'].values.tolist()
+asahikawa_temp = data['asahikawa_temp'].values.tolist()
+
+temp = [kyoto_temp, naha_temp, asahikawa_temp]
+colors = ['red', 'blue', 'green']
+
+graph.temp_comp(month, temp, colors)
