@@ -20,12 +20,14 @@ label = ['A', 'B', 'C', 'D', 'E']
 p = [5, 30, 25, 14, 9]
 
 # ヒストグラム用
+# 引数：(平均，標準偏差，サンプル数)
 data = np.random.normal(10, 10, 1000)
 
 # colorは色を表す．red, green, blue, orangeなど，好きな色に変更することができる
 # xとyの[]内に描画するグラフの値を書く
-# graph.line(month, temp, color='orange')
-graph.bar(month, rain, color='blue')
+graph.line(month, temp, color='orange')
+# graph.bar(month, rain, color='blue')
 # graph.barh(x, y, color='magenta')
 # graph.scatter(x, y, color='cyan')
+# graph.circle(label, p, True)
 # graph.histgram(data, color='green')

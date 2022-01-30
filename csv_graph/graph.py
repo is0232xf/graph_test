@@ -28,8 +28,6 @@ def scatter(x, y, color='black'):
 def circle(label, p, sorted=False):
     if sorted==True:
         p, label = circle_sort(p, label)
-        print("p:", p)
-        print("label: ", label)
     plt.pie(p, labels=label, autopct="%1.1f%%", startangle=90, counterclock=False)
     plt.show()
 
