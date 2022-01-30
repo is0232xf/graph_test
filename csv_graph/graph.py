@@ -12,7 +12,6 @@ def line(x, y, color='black'):
     plt.show()
 
 def bar(x, y, color='black'):
-    plt.xticks([])
     plt.bar(x, y, color=color)
     plt.show()
 
