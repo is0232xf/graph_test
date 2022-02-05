@@ -12,26 +12,22 @@ def bar(x, y, color='black'):
     plt.show()
 
 def barh(x, y, color='black'):
-    plt.xticks(x)
     plt.barh(x, y, color=color)
     plt.show()
 
 def scatter(x, y, color='black'):
-    plt.xticks(x)
     plt.scatter(x, y, c=color)
     plt.show()
 
 def circle(label, p, sorted=False):
     if sorted==True:
         p, label = circle_sort(p, label)
-        print("p:", p)
-        print("label: ", label)
     plt.pie(p, labels=label, autopct="%1.1f%%", startangle=90, counterclock=False)
     plt.show()
 
 def histgram(x, color):
-    plt.xticks(x)
-    plt.hist(x, color=color)
+    plt.xlim(0, 100)
+    plt.hist(x, bins=10, color=color)
     plt.show()
 
 def circle_sort(p, label):
